@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palpitex</title>
+    <title>Palpitex Ultra</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="container-block">
-        <h1>PALPITEX</h1>
+        <div>
+            <h1>PALPITEX</h1>
+            <div id="phase-indicator">Fase 1: Modo Normal</div>
+            <div id="scoreboard">
+                Vitórias: <span id="wins-count">0</span> | 
+                Derrotas: <span id="losses-count">0</span>
+                <button id="reset-score-btn" title="Excluir contagem">🗑️</button>
+            </div>
+        </div>
     </header>
 
     <main class="container-block">
-        <div id="grid-container"></div>
+        <div id="boards-wrapper">
+            <div id="grid-container-1" class="grid-container"></div>
+            <div id="grid-container-2" class="grid-container hidden-board"></div>
+        </div>
         <div id="keyboard-container"></div>
     </main>
 
@@ -23,14 +34,26 @@
 
     <button id="help-btn">?</button>
 
-    <!-- O modal agora só aparece para Fim de Jogo (Vitória/Derrota) ou Ajuda -->
+    <!-- Modal de Feedback Geral (Vitória, Derrota, Ajuda) -->
     <div id="custom-modal" class="modal-overlay hidden">
         <div class="modal-content">
-            <h2 id="modal-title">Fim de Jogo</h2>
-            <div id="modal-body-content">
-                <p id="modal-message">Mensagem do jogo.</p>
+            <h2 id="modal-title">Aviso</h2>
+            <div id="modal-body-content"></div>
+            <div class="modal-buttons">
+                <button id="modal-close-btn">Fechar</button>
             </div>
-            <button id="modal-close-btn">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmação Customizado para Excluir Placar -->
+    <div id="confirm-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2>Excluir Placar?</h2>
+            <p>Você tem certeza que deseja apagar todo o seu histórico de vitórias e derrotas?</p>
+            <div class="modal-buttons">
+                <button id="confirm-yes-btn" class="btn-danger">Sim, Excluir</button>
+                <button id="confirm-no-btn">Cancelar</button>
+            </div>
         </div>
     </div>
 
