@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palpitex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="container-block">
+        <h1>PALPITEX</h1>
+    </header>
+
+    <main class="container-block">
+        <div id="grid-container"></div>
+        <div id="keyboard-container"></div>
+    </main>
+
+    <footer class="container-block">
+        <button id="restart-btn">Reiniciar Jogo</button>
+    </footer>
+
+    <button id="help-btn">?</button>
+
+    <!-- O modal agora só aparece para Fim de Jogo (Vitória/Derrota) ou Ajuda -->
+    <div id="custom-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2 id="modal-title">Fim de Jogo</h2>
+            <div id="modal-body-content">
+                <p id="modal-message">Mensagem do jogo.</p>
+            </div>
+            <button id="modal-close-btn">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
