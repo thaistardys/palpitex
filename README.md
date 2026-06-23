@@ -6,6 +6,12 @@ O projeto evolui o conceito tradicional trazendo um **sistema progressivo de fas
 
 ---
 
+## 🚀 Demonstração
+
+▶️ **[Acesse a aplicação em execução aqui](https://thaistardys.github.io/palpitex/)**
+
+---
+
 ## 🚀 Funcionalidades Clave
 
 - **Fase 1 (Modo Tradicional):** Tente adivinhar uma palavra secreta de 5 letras em até 6 tentativas.
